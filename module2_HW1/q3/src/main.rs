@@ -4,7 +4,7 @@ use rand::distributions::{Distribution, Uniform};
 
 fn main() {
     let min = 100_000;
-    let max = 1_000_000;
+    let max = 10_000_000;
     let step = 100_000;
 
     let mut durations = Vec::new();

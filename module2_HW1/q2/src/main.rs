@@ -4,9 +4,9 @@ use std::time::{Duration, Instant};
 use rand::distributions::{Distribution, Uniform};
 
 fn main() {
-    let min = 100;
-    let max = 1_000;
-    let step = 100;
+    let min = 500;
+    let max = 5_000;
+    let step = 500;
 
     let mut durations = Vec::new();
     
@@ -29,7 +29,7 @@ fn build_ordered_list(n: i32) -> (i32, Duration) {
 
     // generate random number
     let mut rng = rand::thread_rng();
-    let dist = Uniform::from(1..n);
+    let dist = Uniform::from(1..=n);
 
       for i in 0..n{        
         let number = dist.sample(&mut rng);
